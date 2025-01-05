@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://ccjjyeirpmxbs"]
+
+[ext_resource type="Script" path="res://game/game.gd" id="1_3hqip"]
+[ext_resource type="PackedScene" uid="uid://dyab7s5ju3866" path="res://game/player/player.tscn" id="1_83b5p"]
+[ext_resource type="FontFile" uid="uid://c7ciq4q7pfqjy" path="res://assets/fonts/serif.ttf" id="1_tu4bw"]
+[ext_resource type="PackedScene" uid="uid://bdc53vnu1qlxe" path="res://game/terrain/tree.tscn" id="3_44kl6"]
+[ext_resource type="PackedScene" uid="uid://c0wqpkw0k4010" path="res://game/animals/duck.tscn" id="4_jsgqh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8hqgu"]
+font = ExtResource("1_tu4bw")
+
+[node name="Game" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+script = ExtResource("1_3hqip")
+duck_scene = ExtResource("4_jsgqh")
+tree_scene = ExtResource("3_44kl6")
+number_of_ducks = 100
+number_of_trees = 10
+
+[node name="Static" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Top" type="HBoxContainer" parent="Static"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_right = 46.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="Count" type="Label" parent="Static/Top"]
+layout_mode = 2
+text = "Kill all the ducks!"
+label_settings = SubResource("LabelSettings_8hqgu")
+horizontal_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("1_83b5p")]
+unique_name_in_owner = true
+position = Vector2(320, 181)
+
+[node name="Tree" parent="." instance=ExtResource("3_44kl6")]
+position = Vector2(261, 54)
