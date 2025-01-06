@@ -18,19 +18,20 @@ tree_scene = ExtResource("3_44kl6")
 number_of_ducks = 100
 number_of_trees = 10
 
-[node name="Static" type="CanvasLayer" parent="."]
+[node name="Sticky" type="CanvasLayer" parent="."]
 layer = 0
 
-[node name="Top" type="HBoxContainer" parent="Static"]
+[node name="Top" type="HBoxContainer" parent="Sticky"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -45.0
-offset_right = 46.0
-offset_bottom = 23.0
+offset_left = -97.5
+offset_top = 10.0
+offset_right = 98.5
+offset_bottom = 34.0
 grow_horizontal = 2
 
-[node name="Count" type="Label" parent="Static/Top"]
+[node name="Count" type="Label" parent="Sticky/Top"]
 layout_mode = 2
 text = "Kill all the ducks!"
 label_settings = SubResource("LabelSettings_8hqgu")

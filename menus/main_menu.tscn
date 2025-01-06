@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://cni8abhphitt5"]
+
+[ext_resource type="Script" path="res://menus/main_menu.gd" id="1_h0wdi"]
+[ext_resource type="Texture2D" uid="uid://cdajktep3nke2" path="res://assets/images/bg.png" id="2_1qb4d"]
+[ext_resource type="LabelSettings" uid="uid://ce2ifr2kil1u2" path="res://menus/title_initial_style.tres" id="3_aut3e"]
+[ext_resource type="LabelSettings" uid="uid://b0m5vki33dkgr" path="res://menus/title_style.tres" id="4_4ijuf"]
+[ext_resource type="LabelSettings" uid="uid://pj7851hloxq4" path="res://menus/menu_item_selected_style.tres" id="5_13uxr"]
+[ext_resource type="LabelSettings" uid="uid://daqlbxi1efixa" path="res://menus/menu_item_style.tres" id="6_pw5ge"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_h0wdi")
+
+[node name="Sticky" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="Sticky"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1qb4d")
+expand_mode = 1
+stretch_mode = 6
+flip_h = true
+
+[node name="Shadow" type="ColorRect" parent="Sticky"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.099986, 0.099986, 0.0999861, 0.439216)
+
+[node name="TopLeft" type="HBoxContainer" parent="Sticky"]
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 299.0
+offset_bottom = 102.0
+
+[node name="FirstLetter" type="Label" parent="Sticky/TopLeft"]
+layout_mode = 2
+text = "D"
+label_settings = ExtResource("3_aut3e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="Sticky/TopLeft"]
+layout_mode = 2
+text = "uckmania"
+label_settings = ExtResource("4_4ijuf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" type="VBoxContainer" parent="Sticky"]
+offset_left = 50.0
+offset_top = 120.0
+offset_right = 299.0
+offset_bottom = 206.0
+
+[node name="Play" type="Label" parent="Sticky/Menu"]
+layout_mode = 2
+text = "Start Game"
+label_settings = ExtResource("5_13uxr")
+
+[node name="Settings" type="Label" parent="Sticky/Menu"]
+layout_mode = 2
+text = "Settings"
+label_settings = ExtResource("6_pw5ge")
+
+[node name="Exit" type="Label" parent="Sticky/Menu"]
+layout_mode = 2
+text = "Exit
+"
+label_settings = ExtResource("6_pw5ge")

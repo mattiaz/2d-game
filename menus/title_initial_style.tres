@@ -1,0 +1,11 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ce2ifr2kil1u2"]
+
+[ext_resource type="FontFile" uid="uid://c7ciq4q7pfqjy" path="res://assets/fonts/serif.ttf" id="1_0257j"]
+
+[resource]
+font = ExtResource("1_0257j")
+font_size = 42
+outline_size = 6
+outline_color = Color(0, 0.486275, 0.396078, 1)
+shadow_size = 8
+shadow_color = Color(0, 0.47451, 0.388235, 0.784314)

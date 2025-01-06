@@ -4,7 +4,7 @@ extends Node2D
 @export var tree_scene : PackedScene
 @export var number_of_ducks : int = 10
 @export var number_of_trees : int = 20
-@onready var label : Label = $Static/Top/Count
+@onready var label : Label = $Sticky/Top/Count
 
 var kill_count : int = 0
 

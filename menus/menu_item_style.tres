@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://daqlbxi1efixa"]
+
+[ext_resource type="FontFile" uid="uid://y4reuckbcmow" path="res://assets/fonts/text.ttf" id="1_s6cue"]
+
+[resource]
+font = ExtResource("1_s6cue")
+font_size = 22
+shadow_size = 9
+shadow_color = Color(0, 0, 0, 0.8)
